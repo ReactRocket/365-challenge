@@ -50,14 +50,17 @@ a{
     font-weight: 500;
 }
 
-
+.fixed-position{
+    position: fixed;
+    top: 0;
+}
 main{
     height: 100%;
     width: 100%;
     padding: 20px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
 }
 
 section{
@@ -106,6 +109,70 @@ footer{
 
 
 ::selection{
-    background-color: aqua;
+    background-color: black;
     color: yellow;
 }
+
+.side-menu-toggle-button-container{
+    display: none;
+}
+
+.side-menu-bar{
+    transition: all 0.5s ease;
+    transform-origin: left right;
+}
+
+#backToTop{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    border: 1px solid lightgray;
+    border-radius: 50%;
+    width: 40px;
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+    box-shadow: 0 0 2px;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 425px) {
+    #desktop-side-menu{
+        display: none;
+    }
+    .side-menu-toggle-button-container{
+        cursor: pointer;
+        display: flex;
+        justify-content: end;
+        align-items: center;
+    }
+    .side-menu-bar{
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 10px;
+        width: 200px;
+        height: 100vh;
+        background-color: whitesmoke;
+        box-shadow: 0 0 2px;
+        z-index: 100;
+        overflow-y: auto;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+    }
+
+    .side-menu-bar li{
+        width: 100%;
+        border:1px solid lightgray;
+        padding: 10px;
+        border-radius: 10px;
+        text-align: center;
+    }
+}
+
