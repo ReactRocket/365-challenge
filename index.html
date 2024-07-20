@@ -4,114 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>365-Day Web Development Challenge</title>
-    <style>
-      body {
-        height: 100%;
-        width: 100%;
-        padding: 20px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
-      }
-      .container {
-        padding: 20px;
-        height: 90%;
-        border: 0.5px dotted gray;
-        line-height: 1.6;
-        max-width: 800px;
-        margin: auto;
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
-          sans-serif;
-        font-size: 16px;
-        width: 100%;
-        background-color: whitesmoke;
-      }
-      h1 {
-        color: #333;
-        text-align: center;
-      }
-      .challenge {
-        margin-bottom: 20px;
-      }
-      .challenge a {
-        text-decoration: none;
-        color: #007bff;
-        font-weight: bold;
-      }
-      .challenge a:hover {
-        text-decoration: underline;
-      }
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
 
-      main{
-        overflow-y: auto;
-        overflow-x: hidden;
-      }
-
-      nav {
-        width: 100%;
-        height: 50px;
-        border-bottom: 0.5px solid rgb(219, 215, 215);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: whitesmoke;
-      }
-
-      footer {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 50px;
-        width: 100%;
-        border-top: 0.5px solid rgb(199, 197, 197);
-      }
-
-      ::-webkit-scrollbar {
-        width: 8px;
-        background-color: lightgrey;
-        border-radius: 50px;
-      }
-
-      ::-webkit-scrollbar-thumb {
-        background-color: gray;
-        border-radius: 50px;
-      }
-
-      ::selection {
-        background-color: aqua;
-        color: yellow;
-      }
-    </style>
   </head>
   <body>
     <div class="container">
       <nav>
-        <h1>365-Day Web Development Challenge</h1>
+        <b class="header">365-Day Web Development Challenge</>
       </nav>
 
-      <main>
-        <div class="challenge">
-          <h3>Day 1: Interactive Portfolio Website</h3>
-          <p>
-            Create a personal portfolio showcasing your projects, skills, and
-            experience. Include animations, interactive elements, and a contact
-            form.<a href="./1-Interactive Portfolio Website/index.html"
-              >Show Me</a
-            >
-          </p>
-        </div>
-        <div class="challenge">
-          <h3>Day 2: Weather App</h3>
-          <p>
-            Build a simple weather application that fetches data from a weather API. Display current weather conditions, forecasts, and an interactive map.
-            <a href="/2-Weather App/index.html">Show Me</a>
-          </p>
-        </div>
+      <main id="dataList">
+        <!-- data come dynamicilly  -->
       </main>
       <footer>
-        <h4>Thank You To Visit My Website!</h4>
+        <b id="footer">Thank You To Visit My Website!</b>
       </footer>
     </div>
     <!-- Repeat the above structure for each day -->
