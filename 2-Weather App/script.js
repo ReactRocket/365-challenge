@@ -11,8 +11,10 @@ window.addEventListener('load',()=>{
 
 searchInput.addEventListener("keyup", (e) => {
     if (e.target.value) {
-        suggestionBox.style.display = 'flex'
-        suggestionList(e.target.value)
+        let searchResult = suggestionList(e.target.value)
+        if (searchResult) {
+           suggestionBox.style.display = 'flex'
+        }
     } else {
         suggestionBox.style.display = 'none'
     }
@@ -74,7 +76,15 @@ function suggestionList(city){
     let searchHistory = localStorage.getItem('searchHistory') || []
     if (searchHistory.length ) {
         searchHistory = JSON.parse(searchHistory)
-        console.log(searchHistory.find(obj => obj.city.includes(city)));
+        let searchResult = searchHistory.find(obj => obj.city.includes(city))
+        if (searchResult) {
+            suggestionBox.innerHTML = `
+            <li>${searchResult.city}</li>
+          `
+          return searchResult;
+        }else{
+          suggestionBox.innerHTML = ""
+        }
     }
 
 }
