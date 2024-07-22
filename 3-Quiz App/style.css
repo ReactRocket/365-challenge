@@ -1,25 +1,138 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 body{
     height: 100vh;
-    width: 100%;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: white;
     overflow: hidden;
+    flex-direction: column;
+    gap: 20px;
 }
 
 main{
+    width: 700px;
+    height: 500px;
+    background-color: whitesmoke;
+    border-radius: 15px;
+    box-shadow: 0 0 2px 1px gray;
     display: flex;
     justify-content: center;
-    align-content: center;
-    flex-direction: column;
-    gap: 20px;
+    align-items: center;
+}
+
+@media (max-width:768px) {
+    main{
+        width: 300px;
+        height: 500px;
+    }
+}
+
+main > div{
+    padding: 20px;
+}
+    
+main > div,form,fieldset{
     height: 100%;
     width: 100%;
 }
 
-.container{
-    width: 700px;
-    height: 500px;
-    background-color: aliceblue;
+fieldset{
+    border-radius: 10px;
+    display: flex;
+    justify-content: start;
+    align-items: flex-start;
+    flex-direction: column;
+    padding:30px 15px;
+    gap: 20px;
+    overflow: auto;
+
+}
+
+legend{
+    background-color: whitesmoke;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 0 10px;
+}
+
+.form-fields{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 500;
+    font-size: medium;
+}
+
+.form-fields input,.form-fields select{
+    padding: 10px;
+    border-radius: 5px;
+    border: 0;
+    box-shadow: 0 0 1px;
+}
+
+.form-buttons{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.form-buttons button{
+    background-color:whitesmoke;
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 0 2px;
+    cursor: pointer;
+}
+
+
+.form-buttons button:focus{
+    background-color: antiquewhite;
+}
+
+
+
+#alertContainer{
+    position: fixed;
+    top: 0;
+    right: 10px;
+    min-height: 40px;
+    min-width: 200px;
+    max-width: 400px;
+    overflow: hidden;
+}
+
+#alertContainer div{
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+.alert {
+background-color: red; /* Red background for alert */
+}
+
+.warning {
+background-color: orange; /* Orange background for warning */
+}
+
+.success {
+background-color: green; /* Green background for success */
 }

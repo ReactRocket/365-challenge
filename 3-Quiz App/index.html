@@ -5,16 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz App</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
+    <h1>Quiz App</h1>
     <main>
-        <h1>
-            Quiz App
-        </h1>
-        <div class="container">
-
+        <div id="configContainer">
+            <fieldset>
+                <legend>Quiz Setting</legend>
+                <div class="form-fields">
+                    <label for="noOfQuestion">No of Questions</label>
+                    <input type="number" title="No of Questions" id="noOfQuestion" placeholder="Enter number of questions...">
+                </div>
+                <div class="form-fields">
+                    <label for="category">Question Category</label>
+                    <select id="category" title="Question Category">
+                        <option value="" selected>Select Category</option>
+                        <option value="1">Category 1</option>
+                        <option value="2">Category 2</option>
+                        <option value="3">Category 3</option>
+                        <option value="4">Category 4</option>
+                        <option value="9">Category 5</option>
+                    </select>
+                </div>
+                <div class="form-fields">
+                    <label for="difficulty">Question Difficulty</label>
+                    <select id="difficulty" title="Question Difficulty">
+                        <option value="" selected>Select Difficulty</option>
+                        <option value="easy">Easy</option>
+                        <option value="medium">Medium</option>
+                        <option value="hard">Hard</option>
+                    </select>
+                </div>
+                <div class="form-fields">
+                    <label for="type">Question Type</label>
+                    <select id="type" title="Question Type">
+                        <option value="" selected>Select Type</option>
+                        <option value="multiple">Multiple Choice</option>
+                        <option value="boolean">True/False</option>
+                    </select>
+                </div>
+                <div class="form-buttons">
+                    <button id="resetBTN">Reset</button>
+                    <button id="nextBTN">Next</button>
+                </div>
+            </fieldset>
         </div>
+        <!-- Uncomment these divs if needed for further functionality
+        <div id="quizContainer"></div>
+        <div id="resultContainer"></div> 
+        -->
     </main>
+    <div id="alertContainer">
+        
+    </div>
 </body>
 </html>
